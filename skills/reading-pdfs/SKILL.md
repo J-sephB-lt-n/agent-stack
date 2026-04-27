@@ -204,22 +204,7 @@ with pymupdf.open("/path/to/your/input.pdf") as pdf:
             colorspace=pymupdf.csGRAY,  # use pymupdf.csRGB if colour is useful (e.g. graphs)
             alpha=False,
         )
-        match page_pixmap.n:
-            case 1:
-                img_mode = "L"
-            case 2:
-                img_mode = "LA"
-            case 3:
-                img_mode = "RGB"
-            case 4:
-                img_mode = "RGBA"
-            case _:
-                raise ValueError(f"Unsupported pixmap channel count: {page_pixmap.n}")
-        page_img: Image.Image = Image.frombytes(
-            mode=img_mode,
-            size=(page_pixmap.width, page_pixmap.height),
-            data=page_pixmap.samples,
-        )
+        page_img: Image.Image = page_pixmap.pil_image()
         max_side_len: int = max(page_img.width, page_img.height)
         if max_side_len > MAX_IMAGE_SIDE:
             scale: float = MAX_IMAGE_SIDE / max_side_len
