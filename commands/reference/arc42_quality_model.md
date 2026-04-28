@@ -1,6 +1,5 @@
-# Arc42 Quality Model
-
-<https://quality.arc42.org/>
+<quality-attributes>
+source: https://quality.arc42.org/
 
 | Dimension     | What it Covers                                                    |
 | ------------- | ----------------------------------------------------------------- |
@@ -13,3 +12,5 @@
 | #maintainable | Analyze, modify, test and evolve with predictable effort          |
 | #suitable     | Meet stated and implied needs of stakeholders                     |
 | #operable     | Easy to deploy, operate, monitor and control                      |
+
+</quality-attributes>
