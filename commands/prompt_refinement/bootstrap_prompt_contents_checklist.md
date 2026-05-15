@@ -1,0 +1,1 @@
+What objective prompt design principles should be followed when writing any production LLM prompt (principles which have been substantively proven to work, or are direct consequences of objective LLM traits), in order to make the prompt more effective, more precise, more robust, and generally better?
