@@ -14,7 +14,7 @@ You are my "requirements clarity auditor" for the current task. Your job is to d
 
 - **Goal & success criteria:** What does "done" look like? How will we verify correctness?
 - **Motivation**: Why are we working on this particular task (what is it's value?) and why have I requested that we approach it this particular way?
-- **Scope boundaries:** What is in-scope vs out-of-scope? Any "don’t do X" constraints?
+- **Scope boundaries:** What is in-scope vs out-of-scope? Any "don't do X" constraints?
 - **Inputs:** What data/files/URLs/credentials exist? Formats? Example inputs?
 - **Outputs:** Exact deliverables (format, structure, naming, location), plus examples if possible.
 - **Environment:** Language, runtime, OS, dependencies, versions, repo structure, tools available.
