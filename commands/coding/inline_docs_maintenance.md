@@ -1,19 +1,65 @@
 # Inline Documentation Maintenance
 
-Prior to commencing any further discussion or action, do the following:
+## Objective
 
-1. Identify all sources of documentation in the codebase we are currently working on (if the codebase scope is unclear then ask the user). Specifically, find any files matching these patterns:
-   - Root README.md
-   - CONTEXT.md (appearing at project root or in any folder or subfolder of the codebase)
-   - CONTEXT_MAP.md
-   - `docs/**/*`
-   - `**/adr/**`
-   - `.current_agent_context/**/*`
-2. For all documentation identified, ask the user which of files need to be actively maintained. For those not requiring active maintenance, recommend to the user that they be archived or deleted (but don't touch these files without explicit user consent).
-3. Identify if there is an established location in this project for documenting project-specific canonical domain language in the codebase. If there isn't one, recommend a location to the user to use going forward - either as a section within one of the existing docs or as a new document.
-   If you decide to create a new doc, suggest 'UBIQUITOUS_LANGUAGE.md'
-4. Identify if there is an existing established location in this project for recording architectural decisions. If there is not, recommend a location to the user to use going forward - either as a subsection/module within one of the existing documentation modules or as a new location. If nothing exists, suggest `docs/adr/0000-<adr-name-here>.md`. If there is no ADR convention, include in your ADRs the sections 'title', 'status', 'context', 'decision', 'consequences', 'alternatives-considered'.
-5. As you commence discussion with the user and/or write code in this codebase and identify drift between the active project documentation and the codebase, do inline updates to the docs. Don't batch updates - capture them as they happen.
+Maintain project documentation so it stays aligned with the current codebase, domain language, and architectural decisions while following the project's existing documentation conventions.
+
+Unless otherwise specified, treat the current repository/workspace root as the codebase scope. If the scope is unclear, ask the user to identify the relevant repository, folder, or workspace before proceeding.
+
+## Initial Documentation Discovery
+
+Before proceeding with further discussion or work on the codebase, inspect the project for documentation sources, including:
+
+- README.md
+- Any CONTEXT.md file at the root or in any subfolder
+- CONTEXT_MAP.md
+- `docs/**/*`
+- `**/adr/**`
+
+Ask the user which of the discovered documentation is being actively maintained. For documentation not under active maintenance, recommend to the user that those docs be archived or deleted (but don't touch these files without explicit user consent).
+
+## Canonical Domain Language
+
+Identify whether the project has an established place for canonical domain language, glossary terms, bounded-context vocabulary, or ubiquitous language.
+
+If such a location exists, use it.
+
+If none exists, recommend one of the following, in this order:
+
+1. A suitable section in an existing active documentation file
+2. A new dedicated document named `UBIQUITOUS_LANGUAGE.md`
+3. Another location that better fits the project's existing documentation conventions
+
+When the user uses a term that conflicts with documented domain language, call it out immediately and ask for clarification.
+
+Example:
+
+Your glossary at `<filepath>` defines "cancellation" as X, but you seem to mean Y. Which meaning should we use here?
+
+When the user uses vague or overloaded domain language, propose a more precise canonical term.
+
+Example:
+
+You’re saying "account." Do you mean CustomerAccount, UserAccount, or something else? Those appear to be distinct concepts in this codebase.
+
+## Architectural Decisions
+
+Identify whether the project has an established place and format for keeping a history of architectural decisions.
+
+If a convention exists, follow it.
+
+If no convention exists, recommend:
+
+`docs/adr/<adr-num>-<adr-name.md`
+
+Default ADR sections:
+
+- Title
+- Status
+- Context
+- Decision
+- Consequences
+- Alternatives Considered
 
 ## Rules
 
@@ -39,14 +85,27 @@ When the user uses a term that conflicts with the existing documented domain lan
 
 When the user uses vague or overloaded terms, propose a precise canonical term. "You're saying 'account' - do you mean the Customer or the User? Those are different things."
 
-### Sharpen fuzzy language
-
-When the user uses vague or overloaded terms, propose a precise canonical term. "You're saying 'account' - do you mean the Customer or the User? Those are different things."
-
 ### Discuss concrete scenarios
 
 When domain relationships are being discussed, stress-test them with specific scenarios. Invent scenarios that probe edge cases and force the user to be precise about the boundaries between concepts.
 
-### Cross-reference with code
+### Cross-reference with code and existing documentation
 
-When the user states how something works, check whether the code agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible - which is right?"
+When the user states how something works, check whether the code and existing documentation agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible - which is right?"
+
+### Update Documentation Inline
+
+When you encounter any divergence (differing or missing information) between the user understanding, the codebase and the maintained documentation, update the documentation right there. Don't batch these up - capture them as they happen.
+
+### Priority Order
+
+When maintaining documentation, follow this priority order:
+
+1. Explicit user instructions
+2. Existing project documentation conventions
+3. Active-maintenance documentation set
+4. Verified code behavior
+5. Existing domain language / glossary
+6. Default conventions in this prompt
+
+If these conflict, explain the conflict and ask for confirmation before making a material documentation change.
