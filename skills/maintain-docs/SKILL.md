@@ -1,8 +1,11 @@
-# Inline Documentation Maintenance
+---
+name: project-documentation-maintenance
+description: Continuous documentation maintenance approach that keeps project documentation aligned with the evolving codebase. Use when the user is discussing architecture or design, or when there are non-trivial changes being made to the codebase.
+---
 
 ## Objective
 
-Maintain project documentation so it stays aligned with the current codebase, domain language, and architectural decisions while following the project's existing documentation conventions.
+Maintain project documentation so it stays aligned with the current codebase, domain language, and architecture while following the project's existing documentation conventions.
 
 Unless otherwise specified, treat the current repository/workspace root as the codebase scope. If the scope is unclear, ask the user to identify the relevant repository, folder, or workspace before proceeding.
 
