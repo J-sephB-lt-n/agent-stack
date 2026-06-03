@@ -16,7 +16,23 @@ Now (in exactly this order) do the following:
 
 List out all of the filepaths for me so that I can tell you precisely which files to read.
 
-3. Ask my permission to see the layout of the whole codebase (`fd . --type f --exclude '.*' --exclude '__pycache__'`)
+3. Ask my permission to see the layout of the whole codebase using
+
+   ```bash
+   fd . --type f \
+   --exclude .git \
+   --exclude .venv \
+   --exclude venv \
+   --exclude __pycache__ \
+   --exclude coverage \
+   --exclude .pytest_cache \
+   --exclude .mypy_cache \
+   --exclude .ruff_cache \
+   --exclude node_modules
+   ```
+
+   Before running this and seeing the full list, always pipe it's output into `wc -l` to check that the list is not going to be too big (if it is more than 1000 paths, then you should explore more carefully/granularly).
+
 4. Ask me clarifying questions and go back and forth with me to interrogate what I already know about this topic.
 5. Perform your research, exploring first widely then deeply. Perform multiple iterations of research, each complete round of exploration informing where and how you will search in the next iteration. Do not stop exploring and testing until you are confident that you have the correct answers. If you think they will be helpful, ask my permission to delegate subtasks to codebase researcher subagents (see [Guide to using Codebase Research Subagents](#guide-to-using-codebase-research-subagents))
 6. Summarise your findings and save them to a file. Ask me where you should save this file - you can suggest `.current_agent_context/background_context.md`. If this file already exists, suggest appending your results to it.
