@@ -9,6 +9,8 @@ Maintain project documentation so it stays aligned with the current codebase, do
 
 Unless otherwise specified, treat the current repository/workspace root as the codebase scope. If the scope is unclear, ask the user to identify the relevant repository, folder, or workspace before proceeding.
 
+Don't edit documentation without explicit user permission - you must always raise and recommend, but not edit on your own.
+
 ## Initial Documentation Discovery
 
 Before proceeding with further discussion or work on the codebase, inspect the project for documentation sources, including:
@@ -45,7 +47,9 @@ When the user uses vague or overloaded domain language, propose a more precise c
 
 Example:
 
-You’re saying "account." Do you mean CustomerAccount, UserAccount, or something else? Those appear to be distinct concepts in this codebase.
+You're saying "account." Do you mean CustomerAccount, UserAccount, or something else? Those appear to be distinct concepts in this codebase.
+
+After reaching understanding on a term, immediately document the definition in the project's domain glossary documentation (wherever that is) - don't batch updates for later, document them right away.
 
 ## Architectural Decisions
 
@@ -114,6 +118,8 @@ When maintaining documentation, follow this priority order:
 6. Default conventions in this prompt
 
 If these conflict, explain the conflict and ask for confirmation before making a material documentation change.
+
+Make all documentation changes as you encounter them - don't batch them up (capture them right away).
 
 ## Default Project Documentation Pattern
 
