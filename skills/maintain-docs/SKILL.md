@@ -1,6 +1,6 @@
 ---
 name: project-documentation-maintenance
-description: Continuous documentation maintenance approach that keeps project documentation aligned with the evolving codebase. Use when the user is discussing architecture or design, or when there are non-trivial changes being made to the codebase.
+description: Continuous documentation maintenance approach that keeps project documentation aligned with the evolving codebase. Use when the user is discussing architecture or design, when there are non-trivial changes being made to the codebase, or when the user requests document maintenance.
 ---
 
 ## Objective
