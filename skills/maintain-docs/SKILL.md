@@ -13,13 +13,15 @@ Unless otherwise specified, treat the current repository/workspace root as the c
 
 Before proceeding with further discussion or work on the codebase, inspect the project for documentation sources, including:
 
-- README.md
+- README.md at the root or in any subfolder
 - Any CONTEXT.md file at the root or in any subfolder
 - CONTEXT_MAP.md
 - `docs/**/*`
 - `**/adr/**`
 
 Ask the user which of the discovered documentation is being actively maintained. For documentation not under active maintenance, recommend to the user that those docs be archived or deleted (but don't touch these files without explicit user consent).
+
+If the codebase does not have a documentation convention yet (e.g. no docs, or only a root README.md), then propose to the user that you scaffold one with the [Default Project Documentation Pattern](#default-project-documentation-pattern).
 
 ## Canonical Domain Language
 
@@ -112,3 +114,56 @@ When maintaining documentation, follow this priority order:
 6. Default conventions in this prompt
 
 If these conflict, explain the conflict and ask for confirmation before making a material documentation change.
+
+## Default Project Documentation Pattern
+
+```
+project-root/
+│
+├── README.md                     # Primary entry point for the repository.
+│                                  # Explains purpose, architecture overview,
+│                                  # setup, common workflows, and direct links
+│                                  # to all other project documentation.
+│
+├── docs/                        # Long-form project documentation.
+│   │
+│   ├── README.md                # Documentation index and navigation hub.
+│   │
+│   ├── ...                      # e.g. docs on architecture, deployment,
+    │                             # onboarding, runbooks, api-usage etc.
+│   │
+│   └── adr/                     # Architecture Decision Records (ADRs).
+│       ├── 0001-title.md         # ADR format: sequential numbering.
+│       ├── 0002-title.md
+│       └── ...
+│
+├── tutorials/                   # Project-specific tutorials and examples.
+│   │                             # Intended for learning and onboarding.
+│   │
+│   ├── README.md                # Tutorial index and recommended learning path.
+│   └── ...
+│
+├── src/                         # Application source code.
+│   ├── module-a/
+│   │   ├── README.md            # significant submodules get their own
+│   │   │                         # README.md
+│   │   │                         # e.g. module purpose, responsibilities,
+│   │   │                         # public interfaces, and dependencies.
+│   │   └── ...
+│   │
+│   ├── module-b/
+│   │   ├── README.md
+│   │   └── ...
+│   │
+│   └── shared/
+│       ├── README.md
+│       └── ...
+│
+├── tests/
+│   ├── README.md                # Test strategy and execution guidance.
+│   └── ...
+│
+└── scripts/                     # standalone scripts
+    ├── README.md                # Utility scripts and operational tooling.
+    └── ...
+```
