@@ -93,6 +93,8 @@ Only offer to create an ADR when all three are true:
 
 If any of the three is missing, skip the ADR.
 
+When all three are true, raise the ADR with the user immediately - the moment the decision crystallises - one at a time, as it happens. Never collect candidate ADRs to propose later as a batch. Only create the ADR after the user approves it, and once approved, write it right then before moving on rather than saving it for a later batch.
+
 ### Challenge against the glossary
 
 When the user uses a term that conflicts with the existing documented domain language, call it out immediately. "Your glossary (at `<filepath>`) defines 'cancellation' as X, but you seem to mean Y - which is it?"
