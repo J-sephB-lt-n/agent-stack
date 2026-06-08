@@ -7,6 +7,8 @@ description: Continuous documentation maintenance approach that keeps project do
 
 Maintain project documentation so it stays aligned with the current codebase, domain language, and architecture while following the project's existing documentation conventions.
 
+A further core objective is the identification of dead, contradictory or missing documentation.
+
 Unless otherwise specified, treat the current repository/workspace root as the codebase scope. If the scope is unclear, ask the user to identify the relevant repository, folder, or workspace before proceeding.
 
 Don't edit documentation without explicit user permission - you must always raise and recommend, but not edit on your own.
