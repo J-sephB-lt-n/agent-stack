@@ -11,6 +11,13 @@ Unless otherwise specified, treat the current repository/workspace root as the c
 
 Don't edit documentation without explicit user permission - you must always raise and recommend, but not edit on your own.
 
+Raising and editing are two separate steps with different rules:
+
+1. **Raise immediately, one at a time.** The moment you encounter a divergence (differing or missing information) between the user's understanding, the codebase, and the maintained documentation, surface that single divergence to the user right away. Never collect divergences and present them later as a batch.
+2. **Edit only after permission, then right away.** Once the user approves that specific change, make the edit immediately - before moving on to the next divergence. Do not accumulate approved edits to apply later.
+
+So: surface each divergence as it happens, get a yes/no, and apply approved edits on the spot. The thing you must never batch is the _raising_ of divergences; the thing you must never do without permission is the _editing_.
+
 ## Initial Documentation Discovery
 
 Before proceeding with further discussion or work on the codebase, inspect the project for documentation sources, including:
@@ -49,7 +56,7 @@ Example:
 
 You're saying "account." Do you mean CustomerAccount, UserAccount, or something else? Those appear to be distinct concepts in this codebase.
 
-After reaching understanding on a term, immediately document the definition in the project's domain glossary documentation (wherever that is) - don't batch updates for later, document them right away.
+After reaching understanding on a term, raise the glossary update with the user immediately - don't batch it for later. Once they approve, record the definition in the project's domain glossary documentation (wherever that is) right then, before moving on.
 
 ## Architectural Decisions
 
@@ -102,9 +109,9 @@ When domain relationships are being discussed, stress-test them with specific sc
 
 When the user states how something works, check whether the code and existing documentation agrees. If you find a contradiction, surface it: "Your code cancels entire Orders, but you just said partial cancellation is possible - which is right?"
 
-### Update Documentation Inline
+### Surface Divergences Inline
 
-When you encounter any divergence (differing or missing information) between the user understanding, the codebase and the maintained documentation, update the documentation right there. Don't batch these up - capture them as they happen.
+When you encounter any divergence (differing or missing information) between the user understanding, the codebase and the maintained documentation, raise it with the user right there - one divergence at a time, as it happens. Never batch divergences up to present later. After the user approves the change, apply the edit immediately before continuing.
 
 ### Priority Order
 
@@ -119,7 +126,7 @@ When maintaining documentation, follow this priority order:
 
 If these conflict, explain the conflict and ask for confirmation before making a material documentation change.
 
-Make all documentation changes as you encounter them - don't batch them up (capture them right away).
+Raise every divergence with the user as you encounter it - don't batch them up. Apply each change only after the user approves it, and do so immediately rather than saving approved edits for a later batch.
 
 ## Default Project Documentation Pattern
 
