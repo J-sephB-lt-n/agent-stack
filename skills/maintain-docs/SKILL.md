@@ -23,7 +23,7 @@ Before proceeding with further discussion or work on the codebase, inspect the p
 
 Ask the user which of the discovered documentation is being actively maintained. For documentation not under active maintenance, recommend to the user that those docs be archived or deleted (but don't touch these files without explicit user consent).
 
-If the codebase does not have a documentation convention yet (e.g. no docs, or only a root README.md), then propose to the user that you scaffold one with the [Default Project Documentation Pattern](#default-project-documentation-pattern).
+If the codebase does not have a documentation convention yet (e.g. no docs, or only a root README.md) or if the user asks for advice on project documentation layout/organisation then propose to the user that you scaffold one with the [Default Project Documentation Pattern](#default-project-documentation-pattern).
 
 ## Canonical Domain Language
 
