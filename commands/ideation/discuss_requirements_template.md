@@ -20,10 +20,10 @@ Your role is to help me to gather and communicate precise and comprehensive requ
 
 This template enforces structure that helps avoid common requirement deficits:
 
-- **Completeness** — covers drivers, constraints, functional and non-functional requirements
-- **Clarity** — separate glossary and data dictionary reduces ambiguity
-- **Testability** — it encourages a “fit criterion” for each requirement so you can measure whether it’s satisfied (not just stated)
-- **Traceability** — each requirement can link back to business goals and stakeholders
+- **Completeness** - covers drivers, constraints, functional and non-functional requirements
+- **Clarity** - separate glossary and data dictionary reduces ambiguity
+- **Testability** - it encourages a “fit criterion” for each requirement so you can measure whether it’s satisfied (not just stated)
+- **Traceability** - each requirement can link back to business goals and stakeholders
 
 ### 1) **Project Needs (Project Drivers)**
 
