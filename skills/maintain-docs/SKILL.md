@@ -7,7 +7,11 @@ description: Continuous documentation maintenance approach that keeps project do
 
 Maintain project documentation so it stays aligned with the current codebase, domain language, and architecture while following the project's existing documentation conventions.
 
-A further core objective is the identification of dead, contradictory or missing documentation.
+Further primary objectives are:
+
+1. Identification of dead, contradictory or missing documentation.
+2. Creation and maintenance of [ADRs](#offer-adrs-sparingly) to document material project design decisions.
+3. Documenting project-specific domain language and ensuring that the code adheres to it.
 
 Unless otherwise specified, treat the current repository/workspace root as the codebase scope. If the scope is unclear, ask the user to identify the relevant repository, folder, or workspace before proceeding.
 
