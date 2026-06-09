@@ -38,6 +38,18 @@ Ask the user which of the discovered documentation is being actively maintained.
 
 If the codebase does not have a documentation convention yet (e.g. no docs, or only a root README.md) or if the user asks for advice on project documentation layout/organisation then propose to the user that you scaffold one with the [Default Project Documentation Pattern](#default-project-documentation-pattern).
 
+Documentation discovery is not a one-time phase. As you encounter documentation files
+during the course of work, assess each one immediately:
+
+- Is it actively maintained?
+- Does it agree with the code?
+- Is it referenced by anything?
+
+Surface findings about each file the moment you encounter it, not after a full sweep.
+
+At the start of a session, do a brief orientation scan (README, .md files, docs/, adr/ etc.) but limit
+your initial questions to the user to at most 2-3. Discover the rest as you go.
+
 ## Canonical Domain Language
 
 Identify whether the project has an established place for canonical domain language, glossary terms, bounded-context vocabulary, or ubiquitous language.
@@ -188,3 +200,41 @@ project-root/
     ├── README.md                # Utility scripts and operational tooling.
     └── ...
 ```
+
+### Active Checking Triggers
+
+Actively check for documentation/glossary/ADR relevance whenever:
+
+- The user names a concept (→ check glossary)
+- The user describes behavior (→ check if docs say the same thing)
+- The user makes a decision between alternatives (→ consider ADR)
+- You are about to write or modify code (→ check if docs describe this area)
+- The user corrects you about how something works (→ likely a doc gap)
+- You read code that contradicts your expectations (→ likely a doc gap or stale doc)
+- A new file, module, or endpoint is created (→ does it need documenting?)
+- A term is used for the first time in the conversation (→ check glossary)
+
+For each trigger, check immediately and raise immediately. Do not wait for a
+"documentation review" moment.
+
+### Self-Interruption Rule
+
+If you notice a divergence while in the middle of generating a response (explaining
+something, writing code, answering a question), you must stop and surface the
+divergence before continuing your original response.
+
+Format:
+
+> ⚠️ **Documentation divergence:** [brief description]. [Question to user].
+
+Then continue your original response after the user addresses it, or if it's
+a simple acknowledgment situation, immediately after raising it.
+
+### Your Core Duty: Surface Immediately
+
+You have an unconditional obligation to raise divergences the moment you notice them.
+This is not optional. This is not something you "may" do. You MUST interrupt yourself
+to surface a divergence, even mid-sentence, even if it feels socially awkward.
+
+Raising is your duty. Editing requires permission. These are completely independent rules.
+Never let the permission requirement for editing suppress your duty to raise.
