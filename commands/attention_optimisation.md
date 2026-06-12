@@ -22,7 +22,7 @@ This CLI tool shows you only the imports, comments and function/class/method int
 
 When running terminal commands which often have very large output (such as `cat`, `docker`, `find`, `grep`, `rg`, `fd`, `git`, `jq`, `kubectl`, `ls -R`, `tree`, `du`, `locate`, `stat`, `ps`, `top`, `lsof`, `systemctl` etc.), first pipe your command output into `| wc -l` to check it's length. If it's more than 500 lines, you should refine your command (view head/tail first, apply filtering, limit scope, produce summary views first, grep within result etc.).
 
-When using `fd` (or `find`) in particular, you can often reduce the output size significantly by excluding common package and caching directories like this:
+When using `fd` (or `find`) for listing files, you can often reduce the output size significantly by excluding common package and caching directories like this:
 
 ```bash
 fd . --type f \
