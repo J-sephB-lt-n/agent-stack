@@ -57,8 +57,8 @@ Note: Wear does not occur in software. Limitations in reliability are due to res
 
 ### Qualities tagged with #reliable
 
-- [Accuracy](https://quality.arc42.org/qualities/accuracy)
-- [Analysability](https://quality.arc42.org/qualities/analysability)
+- [Accuracy](https://quality.arc42.org/qualities/accuracy): The degree of conformity of a measured or calculated value to the true value, typically based on a global reference system ([NIST Glossary](https://csrc.nist.gov/glossary/term/accuracy_absolute))
+- [Analysability](https://quality.arc42.org/qualities/analysability): Capability of a product to be effectively and efficiently assessed regarding the impact of an intended change to one or more of its parts, to diagnose it for deficiencies or causes of failures, or to identify parts to be modified. Implementation can include providing mechanisms for the product to analyse its own faults and provide reports prior to a failure or other event. (from [ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023))
 - [Atomicity](https://quality.arc42.org/qualities/atomicity)
 - [Availability](https://quality.arc42.org/qualities/availability)
 - [Backward compatibility](https://quality.arc42.org/qualities/backward-compatibility)
