@@ -59,11 +59,11 @@ Note: Wear does not occur in software. Limitations in reliability are due to res
 
 - [Accuracy](https://quality.arc42.org/qualities/accuracy): The degree of conformity of a measured or calculated value to the true value, typically based on a global reference system ([NIST Glossary](https://csrc.nist.gov/glossary/term/accuracy_absolute))
 - [Analysability](https://quality.arc42.org/qualities/analysability): Capability of a product to be effectively and efficiently assessed regarding the impact of an intended change to one or more of its parts, to diagnose it for deficiencies or causes of failures, or to identify parts to be modified. Implementation can include providing mechanisms for the product to analyse its own faults and provide reports prior to a failure or other event. (from [ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023))
-- [Atomicity](https://quality.arc42.org/qualities/atomicity)
-- [Availability](https://quality.arc42.org/qualities/availability)
-- [Backward compatibility](https://quality.arc42.org/qualities/backward-compatibility)
-- [Bias Mitigation](https://quality.arc42.org/qualities/bias-mitigation)
-- [Capacity](https://quality.arc42.org/qualities/capacity)
+- [Atomicity](https://quality.arc42.org/qualities/atomicity): Atomicity ensures that a transaction is an all-or-nothing unit of work: either all operations are applied, or none are. This prevents partially applied changes and hazardous intermediate states.
+- [Availability](https://quality.arc42.org/qualities/availability): Capability of a product to be accessible and operational when required for use. ([ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023))
+- [Backward compatibility](https://quality.arc42.org/qualities/backward-compatibility): Backward compatibility is a property of an operating system, product, or technology that allows for interoperability with an older legacy system, or with input designed for such a system, especially in telecommunications and computing. ([Wikipedia](https://en.wikipedia.org/wiki/Backward_compatibility))
+- [Bias Mitigation](https://quality.arc42.org/qualities/bias-mitigation): Bias mitigation refers to the systematic identification and reduction of unfair prejudice in algorithmic systems, particularly those using artificial intelligence and machine learning. It involves techniques and practices designed to prevent, detect, and address algorithmic biases that could lead to discriminatory outcomes against individuals or groups based on protected characteristics. ([NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework))
+- [Capacity](https://quality.arc42.org/qualities/capacity): Capacity requirements deal with the amount of information or services that can be handled by the component or system. ([Science Direct](https://www.sciencedirect.com/topics/computer-science/capacity-requirement))
 - [Certifiability](https://quality.arc42.org/qualities/certifiability)
 - [Clarity](https://quality.arc42.org/qualities/clarity)
 - [Compatibility](https://quality.arc42.org/qualities/compatibility)
@@ -125,23 +125,21 @@ Easy to:
 - handle changed workload profiles
 - configure or tailor behavior without invasive redesign
 
-###
-
 ### Definition
 
-Capability of a product to be adapted to changes in its requirements, contexts of use, or system environment.  
-Note: Flexibility to context of use should consider two distinguished aspects, i.e. technical and non-technical. The technical aspect is related with the execution environment of products, such as software, hardware and communication facility; and the non-technical aspect is related with the social environment, such as user and task, and the physical environment, such as climate and nature.  
-++[ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023)++
+Capability of a product to be adapted to changes in its requirements, contexts of use, or system environment.
+Note: Flexibility to context of use should consider two distinguished aspects, i.e. technical and non-technical. The technical aspect is related with the execution environment of products, such as software, hardware and communication facility; and the non-technical aspect is related with the social environment, such as user and task, and the physical environment, such as climate and nature.
+[ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023)
 
 ### Typical Acceptance Criteria
 
-Flexible, as we saw above, means “_adaptable to change_”.  
-For Q42, _#flexible_ focuses on adaptation to external context and runtime/operational variability. Developer-focused changeability concerns (e.g. analyzability, modifiability, testability) belong primarily to ++[#maintainable](https://quality.arc42.org/tag-maintainable)++.  
+Flexible, as we saw above, means "_adaptable to change_".
+For Q42, _#flexible_ focuses on adaptation to external context and runtime/operational variability. Developer-focused changeability concerns (e.g. analyzability, modifiability, testability) belong primarily to [#maintainable](#maintainable).
 When defining what exactly _#flexible_ shall mean for a specific system and stakeholders, we should consider:
 
 - Which external changes are expected (infrastructure, workload, integrations, locales, user/task context)?
 - At which point adaptation is needed (installation, deployment, startup, runtime)?
-- Which adaptations must be configuration-driven vs requiring rollout/redeployment?  
+- Which adaptations must be configuration-driven vs requiring rollout/redeployment?
   Typical acceptance criteria might include:
 - Time/effort to deploy to a new environment (e.g. cloud provider/region/OS)
 - Time/effort to reconfigure behavior for a new context of use
@@ -158,8 +156,8 @@ Cost in terms of
 - Elapsed time
 - Money
 - Extent to which this modification affects other quality attributes
-- New defects introduced  
-  ++[Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)++
+- New defects introduced
+  [Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)
 
 ### _flexible_ for Stakeholders
 
@@ -176,86 +174,84 @@ Cost in terms of
 
 ### Qualities tagged with #flexible
 
-- ++[Adaptability](https://quality.arc42.org/qualities/adaptability)++
-- ++[Agility](https://quality.arc42.org/qualities/agility)++
-- ++[Changeability](https://quality.arc42.org/qualities/changeability)++
-- ++[Co-existence](https://quality.arc42.org/qualities/co-existence)++
-- ++[Composability](https://quality.arc42.org/qualities/composability)++
-- ++[Configurability](https://quality.arc42.org/qualities/configurability)++
-- ++[Customizability](https://quality.arc42.org/qualities/customizability)++
-- ++[Distributability](https://quality.arc42.org/qualities/distributability)++
-- ++[Elasticity](https://quality.arc42.org/qualities/elasticity)++
-- ++[Evolvability](https://quality.arc42.org/qualities/evolvability)++
-- ++[Extensibility](https://quality.arc42.org/qualities/extensibility)++
-- ++[Flexibility](https://quality.arc42.org/qualities/flexibility)++
-- ++[Independence](https://quality.arc42.org/qualities/independence)++
-- ++[Installability](https://quality.arc42.org/qualities/installability)++
-- ++[Integrability](https://quality.arc42.org/qualities/integrability)++
-- ++[Interchangeability](https://quality.arc42.org/qualities/interchangeability)++
-- ++[Internationalization](https://quality.arc42.org/qualities/internationalization)++
-- ++[Localizability](https://quality.arc42.org/qualities/localizability)++
-- ++[Longevity](https://quality.arc42.org/qualities/longevity)++
-- ++[Modifiability](https://quality.arc42.org/qualities/modifiability)++
-- ++[Personalization](https://quality.arc42.org/qualities/personalization)++
-- ++[Portability](https://quality.arc42.org/qualities/portability)++
-- ++[Replaceability](https://quality.arc42.org/qualities/replaceability)++
-- ++[Reusability](https://quality.arc42.org/qualities/reusability)++
-- ++[Scalability](https://quality.arc42.org/qualities/scalability)++
-- ++[Self-containedness](https://quality.arc42.org/qualities/self-containedness)++
-- ++[Themability](https://quality.arc42.org/qualities/themability)++
-- ++[Versatility](https://quality.arc42.org/qualities/versatility)++
-
-##
+- [Adaptability](https://quality.arc42.org/qualities/adaptability)
+- [Agility](https://quality.arc42.org/qualities/agility)
+- [Changeability](https://quality.arc42.org/qualities/changeability)
+- [Co-existence](https://quality.arc42.org/qualities/co-existence)
+- [Composability](https://quality.arc42.org/qualities/composability)
+- [Configurability](https://quality.arc42.org/qualities/configurability)
+- [Customizability](https://quality.arc42.org/qualities/customizability)
+- [Distributability](https://quality.arc42.org/qualities/distributability)
+- [Elasticity](https://quality.arc42.org/qualities/elasticity)
+- [Evolvability](https://quality.arc42.org/qualities/evolvability)
+- [Extensibility](https://quality.arc42.org/qualities/extensibility)
+- [Flexibility](https://quality.arc42.org/qualities/flexibility)
+- [Independence](https://quality.arc42.org/qualities/independence)
+- [Installability](https://quality.arc42.org/qualities/installability)
+- [Integrability](https://quality.arc42.org/qualities/integrability)
+- [Interchangeability](https://quality.arc42.org/qualities/interchangeability)
+- [Internationalization](https://quality.arc42.org/qualities/internationalization)
+- [Localizability](https://quality.arc42.org/qualities/localizability)
+- [Longevity](https://quality.arc42.org/qualities/longevity)
+- [Modifiability](https://quality.arc42.org/qualities/modifiability)
+- [Personalization](https://quality.arc42.org/qualities/personalization)
+- [Portability](https://quality.arc42.org/qualities/portability)
+- [Replaceability](https://quality.arc42.org/qualities/replaceability)
+- [Reusability](https://quality.arc42.org/qualities/reusability)
+- [Scalability](https://quality.arc42.org/qualities/scalability)
+- [Self-containedness](https://quality.arc42.org/qualities/self-containedness)
+- [Themability](https://quality.arc42.org/qualities/themability)
+- [Versatility](https://quality.arc42.org/qualities/versatility)
 
 ### Requirements tagged with #flexible
 
-- ++[Adding a new entity type within 5 days and ≤ 3 modules](https://quality.arc42.org/requirements/adding-entity-type-within-5-days)++
-- ++[Compatible with 5 different battery providers](https://quality.arc42.org/requirements/compatible-with-5-battery-providers)++
-- ++[Configurable UI theme](https://quality.arc42.org/requirements/configurable-ui-theme)++
-- ++[Core functions can be used on multiple OSs](https://quality.arc42.org/requirements/core-functions-on-mac-win-linux)++
-- ++[CRM System Data Synchronization](https://quality.arc42.org/requirements/crm-data-synchronization)++
-- ++[Easily change cloud provider](https://quality.arc42.org/requirements/change-cloud-provider)++
-- ++[Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing)++
-- ++[Independent enhancement of subsystem](https://quality.arc42.org/requirements/independent-enhancement-of-subsystem)++
-- ++[Independent replacement of subsystem](https://quality.arc42.org/requirements/independent-replacement-of-subsystem)++
-- ++[Localizable to several languages](https://quality.arc42.org/requirements/localizable-to-n-languages)++
-- ++[Modular System for Data Analysis](https://quality.arc42.org/requirements/modular-system-for-data-analysis)++
-- ++[On-prem installation ready in 30 minutes](https://quality.arc42.org/requirements/on-prem-installation-ready-in-30-min)++
-- ++[Portable Business Data Checker](https://quality.arc42.org/requirements/portable-business-data-checker)++
-- ++[Efficient update of annual accounting report](https://quality.arc42.org/requirements/annual-tax-update)++
-- ++[Shared library adoption by product teams](https://quality.arc42.org/requirements/shared-library-adoption-by-product-teams)++
-- ++[User Interface can be used in Current Browsers](https://quality.arc42.org/requirements/user-interface-works-with-current-browsers)++
+- [Adding a new entity type within 5 days and ≤ 3 modules](https://quality.arc42.org/requirements/adding-entity-type-within-5-days)
+- [Compatible with 5 different battery providers](https://quality.arc42.org/requirements/compatible-with-5-battery-providers)
+- [Configurable UI theme](https://quality.arc42.org/requirements/configurable-ui-theme)
+- [Core functions can be used on multiple OSs](https://quality.arc42.org/requirements/core-functions-on-mac-win-linux)
+- [CRM System Data Synchronization](https://quality.arc42.org/requirements/crm-data-synchronization)
+- [Easily change cloud provider](https://quality.arc42.org/requirements/change-cloud-provider)
+- [Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing)
+- [Independent enhancement of subsystem](https://quality.arc42.org/requirements/independent-enhancement-of-subsystem)
+- [Independent replacement of subsystem](https://quality.arc42.org/requirements/independent-replacement-of-subsystem)
+- [Localizable to several languages](https://quality.arc42.org/requirements/localizable-to-n-languages)
+- [Modular System for Data Analysis](https://quality.arc42.org/requirements/modular-system-for-data-analysis)
+- [On-prem installation ready in 30 minutes](https://quality.arc42.org/requirements/on-prem-installation-ready-in-30-min)
+- [Portable Business Data Checker](https://quality.arc42.org/requirements/portable-business-data-checker)
+- [Efficient update of annual accounting report](https://quality.arc42.org/requirements/annual-tax-update)
+- [Shared library adoption by product teams](https://quality.arc42.org/requirements/shared-library-adoption-by-product-teams)
+- [User Interface can be used in Current Browsers](https://quality.arc42.org/requirements/user-interface-works-with-current-browsers)
 
 ### Approaches tagged with #flexible
 
-- ++[Asynchronous Messaging](https://quality.arc42.org/approaches/asynchronous-messaging)++
-- ++[CQRS](https://quality.arc42.org/approaches/cqrs)++
-- ++[Feature Toggles](https://quality.arc42.org/approaches/feature-toggles)++
-- ++[Plugin Architecture](https://quality.arc42.org/approaches/plugin-architecture)++
+- [Asynchronous Messaging](https://quality.arc42.org/approaches/asynchronous-messaging)
+- [CQRS](https://quality.arc42.org/approaches/cqrs)
+- [Feature Toggles](https://quality.arc42.org/approaches/feature-toggles)
+- [Plugin Architecture](https://quality.arc42.org/approaches/plugin-architecture)
 
 ## Efficient
 
 - Resource-efficient, fast, low-footprint, low latency.
 - Energy-, storage- and network efficient, having adequate capacity
-- Development-efficient, being easy to change (although that aspect may better be covered by ++[#flexible](https://quality.arc42.org/tag-flexible)++)
+- Development-efficient, being easy to change (although that aspect may better be covered by [#flexible](#flexible))
 - Time-to-market, how efficient new features can _go live_
 
 ### Definitions
 
 capable of producing desired results with little or no waste (as of time or materials)  
-++[Merriam-Webster](https://www.merriam-webster.com/dictionary/efficient)++
+[Merriam-Webster](https://www.merriam-webster.com/dictionary/efficient)
 
 The amount of computing resources and code required by a program to perform a function.  
-++[McCall-1978](https://quality.arc42.org/references/#mccall)++
+[McCall-1978](https://quality.arc42.org/references/#mccall)
 
 ### Effective vs Efficient
 
-The words effective and efficient both mean “capable of producing a result,” but there is an important difference. Effective means “producing a result that is wanted”. Efficient means “capable of producing desired results without wasting materials, time, or energy”. The difference is that when something is effective it produces a result even if it takes some unnecessary resources to do so. When something is efficient, not only does it produce a result, but it does so in a quick or simple way using as little material, time, effort, or energy as possible. The following example sentences show how the two words are used.
+The words effective and efficient both mean "capable of producing a result," but there is an important difference. Effective means "producing a result that is wanted". Efficient means "capable of producing desired results without wasting materials, time, or energy". The difference is that when something is effective it produces a result even if it takes some unnecessary resources to do so. When something is efficient, not only does it produce a result, but it does so in a quick or simple way using as little material, time, effort, or energy as possible. The following example sentences show how the two words are used.
 
 - The 200-page instruction manual was effective (_=successful_) in teaching the teen to repair the car himself, but it would have been more efficient (_=faster and easier_) for someone to show him.
 - His disorganized method of cleaning the house was effective but it was not efficient; in the end, the house was clean, but it took much longer than it should have.  
   The word _effective_ puts more attention on the actual ability to produce a desired result. The word _efficient_ puts more attention on the lack of waste in producing that result.  
-  ++[Britannica Dictionary](https://www.britannica.com/dictionary/eb/qa/How-to-Use-Effective-and-Efficient)++
+  [Britannica Dictionary](https://www.britannica.com/dictionary/eb/qa/How-to-Use-Effective-and-Efficient)
 
 ### Typical Acceptance Criteria
 
@@ -266,91 +262,87 @@ Efficient, as we saw above, can mean several different things:
 - efficient concerning energy or CO2 consumption
 - efficient development processes, like short time-to-market  
   **Scenario Response Measures from [Bass et al.]**
-- The (maximum, medium, mean median) time the response takes ([++[latency](https://quality.arc42.org/qualities/latency)++])
+- The (maximum, medium, mean median) time the response takes ([latency](https://quality.arc42.org/qualities/latency))
 - The number or percentage of satisfied requests over some time interval (throughput) or set of events received
 - The number or percentage of requests that go unsatisfied
-- The variation in response time (++[jitter](https://quality.arc42.org/qualities/jitter)++)
-- Usage level of a computing resource  
-  ++[Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)++
+- The variation in response time ([jitter](https://quality.arc42.org/qualities/jitter))
+- Usage level of a computing resource
+  [Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)
 
 ### Qualities tagged with #efficient
 
-- ++[Affordability](https://quality.arc42.org/qualities/affordability)++
-- ++[Capacity](https://quality.arc42.org/qualities/capacity)++
-- ++[Carbon Emission Efficiency](https://quality.arc42.org/qualities/carbon-emission-efficiency)++
-- ++[Code Complexity](https://quality.arc42.org/qualities/code-complexity)++
-- ++[Code Readability](https://quality.arc42.org/qualities/code-readability)++
-- ++[Coherence](https://quality.arc42.org/qualities/coherence)++
-- ++[Cohesion](https://quality.arc42.org/qualities/cohesion)++
-- ++[Compliance](https://quality.arc42.org/qualities/compliance)++
-- ++[Conciseness](https://quality.arc42.org/qualities/conciseness)++
-- ++[Consistency](https://quality.arc42.org/qualities/consistency)++
-- ++[Cost](https://quality.arc42.org/qualities/cost)++
-- ++[Cycle time](https://quality.arc42.org/qualities/cycle-time)++
-- ++[Determinism](https://quality.arc42.org/qualities/determinism)++
-- ++[Distributability](https://quality.arc42.org/qualities/distributability)++
-- ++[Effectiveness](https://quality.arc42.org/qualities/effectiveness)++
-- ++[Efficiency](https://quality.arc42.org/qualities/efficiency)++
-- ++[Energy Efficiency](https://quality.arc42.org/qualities/energy-efficiency)++
-- ++[Energy Proportionality](https://quality.arc42.org/qualities/energy-proportionality)++
-- ++[Jitter](https://quality.arc42.org/qualities/jitter)++
-- ++[Latency](https://quality.arc42.org/qualities/latency)++
-- ++[Loose Coupling](https://quality.arc42.org/qualities/loose-coupling)++
-- ++[Memory usage](https://quality.arc42.org/qualities/memory-usage)++
-- ++[Performance](https://quality.arc42.org/qualities/performance)++
-- ++[Profitability](https://quality.arc42.org/qualities/profitability)++
-- ++[Releasability](https://quality.arc42.org/qualities/releasability)++
-- ++[Resource efficiency](https://quality.arc42.org/qualities/resource-efficiency)++
-- ++[Resource utilization](https://quality.arc42.org/qualities/resource-utilization)++
-- ++[Response Time](https://quality.arc42.org/qualities/response-time)++
-- ++[Responsiveness](https://quality.arc42.org/qualities/responsiveness)++
-- ++[Shutdown Time](https://quality.arc42.org/qualities/shutdown-time)++
-- ++[Simplicity](https://quality.arc42.org/qualities/simplicity)++
-- ++[Speed](https://quality.arc42.org/qualities/speed)++
-- ++[Startup Time](https://quality.arc42.org/qualities/startup-time)++
-- ++[Sustainability](https://quality.arc42.org/qualities/sustainability)++
-- ++[Throughput](https://quality.arc42.org/qualities/throughput)++
-- ++[Time behaviour](https://quality.arc42.org/qualities/time-behaviour)++
-- ++[Time to Market](https://quality.arc42.org/qualities/time-to-market)++
-
-###
+- [Affordability](https://quality.arc42.org/qualities/affordability)
+- [Capacity](https://quality.arc42.org/qualities/capacity)
+- [Carbon Emission Efficiency](https://quality.arc42.org/qualities/carbon-emission-efficiency)
+- [Code Complexity](https://quality.arc42.org/qualities/code-complexity)
+- [Code Readability](https://quality.arc42.org/qualities/code-readability)
+- [Coherence](https://quality.arc42.org/qualities/coherence)
+- [Cohesion](https://quality.arc42.org/qualities/cohesion)
+- [Compliance](https://quality.arc42.org/qualities/compliance)
+- [Conciseness](https://quality.arc42.org/qualities/conciseness)
+- [Consistency](https://quality.arc42.org/qualities/consistency)
+- [Cost](https://quality.arc42.org/qualities/cost)
+- [Cycle time](https://quality.arc42.org/qualities/cycle-time)
+- [Determinism](https://quality.arc42.org/qualities/determinism)
+- [Distributability](https://quality.arc42.org/qualities/distributability)
+- [Effectiveness](https://quality.arc42.org/qualities/effectiveness)
+- [Efficiency](https://quality.arc42.org/qualities/efficiency)
+- [Energy Efficiency](https://quality.arc42.org/qualities/energy-efficiency)
+- [Energy Proportionality](https://quality.arc42.org/qualities/energy-proportionality)
+- [Jitter](https://quality.arc42.org/qualities/jitter)
+- [Latency](https://quality.arc42.org/qualities/latency)
+- [Loose Coupling](https://quality.arc42.org/qualities/loose-coupling)
+- [Memory usage](https://quality.arc42.org/qualities/memory-usage)
+- [Performance](https://quality.arc42.org/qualities/performance)
+- [Profitability](https://quality.arc42.org/qualities/profitability)
+- [Releasability](https://quality.arc42.org/qualities/releasability)
+- [Resource efficiency](https://quality.arc42.org/qualities/resource-efficiency)
+- [Resource utilization](https://quality.arc42.org/qualities/resource-utilization)
+- [Response Time](https://quality.arc42.org/qualities/response-time)
+- [Responsiveness](https://quality.arc42.org/qualities/responsiveness)
+- [Shutdown Time](https://quality.arc42.org/qualities/shutdown-time)
+- [Simplicity](https://quality.arc42.org/qualities/simplicity)
+- [Speed](https://quality.arc42.org/qualities/speed)
+- [Startup Time](https://quality.arc42.org/qualities/startup-time)
+- [Sustainability](https://quality.arc42.org/qualities/sustainability)
+- [Throughput](https://quality.arc42.org/qualities/throughput)
+- [Time behaviour](https://quality.arc42.org/qualities/time-behaviour)
+- [Time to Market](https://quality.arc42.org/qualities/time-to-market)
 
 ### Requirements tagged with #efficient
 
-- ++[Add new product under 60 minutes](https://quality.arc42.org/requirements/add-new-product)++
-- ++[Affordable CRM (customer relationship management)](https://quality.arc42.org/requirements/affordable-crm)++
-- ++[Budget constrained library update](https://quality.arc42.org/requirements/budget-constraint-library-update)++
-- ++[Save at least 20% of carbon emissions with every new version](https://quality.arc42.org/requirements/carbon-efficiency-save)++
-- ++[Consistent keyboard shortcuts](https://quality.arc42.org/requirements/consistent-keyboard-shortcuts)++
-- ++[Data Throughput for Visual Test System](https://quality.arc42.org/requirements/data-throughput-for-visual-test-system)++
-- ++[Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing)++
-- ++[Efficient generation of test data](https://quality.arc42.org/requirements/efficient-generation-of-test-data)++
-- ++[Fast and accurate sensor](https://quality.arc42.org/requirements/fast-accurate-sensor)++
-- ++[Efficient save function](https://quality.arc42.org/requirements/efficient-save-function)++
-- ++[Fast creation of sales report](https://quality.arc42.org/requirements/fast-creation-of-sales-report)++
-- ++[Fast rollout of changes](https://quality.arc42.org/requirements/fast-rollout-of-changes)++
-- ++[Fast shutdown time (less than 10 sec)](https://quality.arc42.org/requirements/fast-shutdown-time)++
-- ++[Fast startup time (less than 90 sec)](https://quality.arc42.org/requirements/fast-startup-time)++
-- ++[Independent enhancement of subsystem](https://quality.arc42.org/requirements/independent-enhancement-of-subsystem)++
-- ++[Independent replacement of subsystem](https://quality.arc42.org/requirements/independent-replacement-of-subsystem)++
-- ++[Low impact diagnosis](https://quality.arc42.org/requirements/low-impact-diagnosis)++
-- ++[Monolith loose coupling: change blast radius](https://quality.arc42.org/requirements/monolith-loose-coupling-change-blast-radius)++
-- ++[Service loose coupling: change blast radius](https://quality.arc42.org/requirements/service-loose-coupling-change-blast-radius)++
-- ++[Modular System for Data Analysis](https://quality.arc42.org/requirements/modular-system-for-data-analysis)++
-- ++[Near instant search results](https://quality.arc42.org/requirements/near-instant-search-results)++
-- ++[Maintainable checking strategies](https://quality.arc42.org/requirements/maintainable-checking-strategy)++
-- ++[Parallel Data Modification](https://quality.arc42.org/requirements/parallel-data-modification)++
-- ++[Low-overhead query execution measurement](https://quality.arc42.org/requirements/query-execution-management)++
-- ++[Quickly locate bugs](https://quality.arc42.org/requirements/quickly-locate-bugs)++
-- ++[Reduce energy consumption with every new version](https://quality.arc42.org/requirements/reduce-energy-consumption-with-new-version)++
-- ++[Efficient update of annual accounting report](https://quality.arc42.org/requirements/annual-tax-update)++
-- ++[Respond to 15000 requests per workday](https://quality.arc42.org/requirements/respond-to-15000-requests-per-workday)++
-- ++[Response time for image rendering](https://quality.arc42.org/requirements/response-time-for-image-rendering)++
-- ++[Restricted Memory](https://quality.arc42.org/requirements/restricted-memory)++
-- ++[Scale up in 2 Minutes](https://quality.arc42.org/requirements/scale-up-in-2-minutes)++
-- ++[Capacity to process 1000 sensor inputs per minute](https://quality.arc42.org/requirements/capacity-to-process-sensor-inputs)++
-
-###
+- [Add new product under 60 minutes](https://quality.arc42.org/requirements/add-new-product)
+- [Affordable CRM (customer relationship management)](https://quality.arc42.org/requirements/affordable-crm)
+- [Budget constrained library update](https://quality.arc42.org/requirements/budget-constraint-library-update)
+- [Save at least 20% of carbon emissions with every new version](https://quality.arc42.org/requirements/carbon-efficiency-save)
+- [Consistent keyboard shortcuts](https://quality.arc42.org/requirements/consistent-keyboard-shortcuts)
+- [Data Throughput for Visual Test System](https://quality.arc42.org/requirements/data-throughput-for-visual-test-system)
+- [Efficient change of business rules](https://quality.arc42.org/requirements/luggage-routing)
+- [Efficient generation of test data](https://quality.arc42.org/requirements/efficient-generation-of-test-data)
+- [Fast and accurate sensor](https://quality.arc42.org/requirements/fast-accurate-sensor)
+- [Efficient save function](https://quality.arc42.org/requirements/efficient-save-function)
+- [Fast creation of sales report](https://quality.arc42.org/requirements/fast-creation-of-sales-report)
+- [Fast rollout of changes](https://quality.arc42.org/requirements/fast-rollout-of-changes)
+- [Fast shutdown time (less than 10 sec)](https://quality.arc42.org/requirements/fast-shutdown-time)
+- [Fast startup time (less than 90 sec)](https://quality.arc42.org/requirements/fast-startup-time)
+- [Independent enhancement of subsystem](https://quality.arc42.org/requirements/independent-enhancement-of-subsystem)
+- [Independent replacement of subsystem](https://quality.arc42.org/requirements/independent-replacement-of-subsystem)
+- [Low impact diagnosis](https://quality.arc42.org/requirements/low-impact-diagnosis)
+- [Monolith loose coupling: change blast radius](https://quality.arc42.org/requirements/monolith-loose-coupling-change-blast-radius)
+- [Service loose coupling: change blast radius](https://quality.arc42.org/requirements/service-loose-coupling-change-blast-radius)
+- [Modular System for Data Analysis](https://quality.arc42.org/requirements/modular-system-for-data-analysis)
+- [Near instant search results](https://quality.arc42.org/requirements/near-instant-search-results)
+- [Maintainable checking strategies](https://quality.arc42.org/requirements/maintainable-checking-strategy)
+- [Parallel Data Modification](https://quality.arc42.org/requirements/parallel-data-modification)
+- [Low-overhead query execution measurement](https://quality.arc42.org/requirements/query-execution-management)
+- [Quickly locate bugs](https://quality.arc42.org/requirements/quickly-locate-bugs)
+- [Reduce energy consumption with every new version](https://quality.arc42.org/requirements/reduce-energy-consumption-with-new-version)
+- [Efficient update of annual accounting report](https://quality.arc42.org/requirements/annual-tax-update)
+- [Respond to 15000 requests per workday](https://quality.arc42.org/requirements/respond-to-15000-requests-per-workday)
+- [Response time for image rendering](https://quality.arc42.org/requirements/response-time-for-image-rendering)
+- [Restricted Memory](https://quality.arc42.org/requirements/restricted-memory)
+- [Scale up in 2 Minutes](https://quality.arc42.org/requirements/scale-up-in-2-minutes)
+- [Capacity to process 1000 sensor inputs per minute](https://quality.arc42.org/requirements/capacity-to-process-sensor-inputs)
 
 ### Approaches tagged with #efficient
 
