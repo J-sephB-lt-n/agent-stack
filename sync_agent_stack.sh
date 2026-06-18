@@ -93,3 +93,33 @@ for CONFIG_DIR in "$CURSOR_GLOBAL_CONFIG_DIR" "$CURSOR_WSL_GLOBAL_CONFIG_DIR"; d
     done
   fi
 done
+
+if [ -n "${CLAUDE_CODE_GLOBAL_CONFIG_DIR}" ]; then
+  # # --- AGENTS --- #
+  # find ./agents -name '*.md' -type f | while IFS= read -r filepath; do
+  #   dest_filename=$(basename "$filepath")
+  #   dest_filepath="$CLAUDE_CODE_GLOBAL_CONFIG_DIR/agents/$dest_filename"
+  #   set -x
+  #   cp "$filepath" "$dest_filepath"
+  #   sed -i -E '/\s\#\s*(cursor-only|pi-only)\s*$/d' "$dest_filepath"
+  #   set +x
+  # done
+
+  # --- COMMANDS --- #
+  find ./commands -name '*.md' -type f | while IFS= read -r filepath; do
+    dest_filename=$(basename "$filepath")
+    dest_filepath="$CLAUDE_CODE_GLOBAL_CONFIG_DIR/commands/$dest_filename"
+    set -x
+    cp "$filepath" "$dest_filepath"
+    set +x
+  done
+
+  # # --- SKILLS --- #
+  find ./skills -name '*.md' -type f | while IFS= read -r filepath; do
+    skill_dir=$(dirname "$filepath")
+    skill_name=$(basename "$skill_dir")
+    set -x
+    cp -r "$skill_dir/." "$CLAUDE_CODE_GLOBAL_CONFIG_DIR/skills/$skill_name/"
+    set +x
+  done
+fi
