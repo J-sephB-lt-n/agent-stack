@@ -7,7 +7,7 @@ Please apply the following optimisation wherever possible to protect your precio
 
 ## Code Interface Reading
 
-When exploring a python or js/ts codebase at a high level (not diving deeply into a specific part of the codebase), use the `script_summary` CLI tool for viewing file contents.
+When exploring a python, javascript/typescript or C# codebase at a high level (not diving deeply into a specific part of the codebase), use the `script_summary` CLI tool for viewing file contents.
 
 Examples:
 
@@ -16,7 +16,7 @@ cd frontend/src/pages/JobHistory && script_summary index.tsx
 cd backend/apps/jobs && script_summary service.py
 ```
 
-This CLI tool shows you only the imports, comments and function/class/method interfaces (omitting all implementation detail).
+This CLI tool shows you only the interfaces, omitting the implementation detail.
 
 ## Avoid STDOUT Explosion
 
