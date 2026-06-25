@@ -346,11 +346,11 @@ Efficient, as we saw above, can mean several different things:
 
 ### Approaches tagged with #efficient
 
-- ++[Asynchronous Messaging](https://quality.arc42.org/approaches/asynchronous-messaging)++
-- ++[Caching](https://quality.arc42.org/approaches/caching)++
-- ++[Content Delivery Network (CDN)](https://quality.arc42.org/approaches/content-delivery-network)++
-- ++[CQRS](https://quality.arc42.org/approaches/cqrs)++
-- ++[Database Sharding](https://quality.arc42.org/approaches/database-sharding)++
+- [Asynchronous Messaging](https://quality.arc42.org/approaches/asynchronous-messaging)
+- [Caching](https://quality.arc42.org/approaches/caching)
+- [Content Delivery Network (CDN)](https://quality.arc42.org/approaches/content-delivery-network)
+- [CQRS](https://quality.arc42.org/approaches/cqrs)
+- [Database Sharding](https://quality.arc42.org/approaches/database-sharding)
 
 ## Usable
 
@@ -362,12 +362,12 @@ The main idea of _usability_ is that a system shall be designed with (generalize
 
 ### Definitions
 
-Capability of a product to be interacted with by specified users to exchange information between a user and a system via the user interface to complete the intended task. ++[ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023)++
+Capability of a product to be interacted with by specified users to exchange information between a user and a system via the user interface to complete the intended task. [ISO-25010:2023](https://quality.arc42.org/references/#iso-25010-2023)
 
-The capacity of a system to provide a condition for its users to perform the tasks safely, effectively, and efficiently while enjoying the experience. ++[Wikipedia](https://en.wikipedia.org/wiki/Usability)++
+The capacity of a system to provide a condition for its users to perform the tasks safely, effectively, and efficiently while enjoying the experience. [Wikipedia](https://en.wikipedia.org/wiki/Usability)
 
 Enable users to perform their tasks safely, effectively and efficiently while enjoying the experience.  
-++[Volere Version 2.0](https://quality.arc42.org/references/#volere)++
+[Volere Version 2.0](https://quality.arc42.org/references/#volere)
 
 ### Typical Acceptance Criteria
 
@@ -387,7 +387,7 @@ The system should:
 - gain of user knowledge
 - ratio of successful operations to total operations
 - amount of time or data lost when an error occurs  
-  ++[Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)++
+  [Bass et al., 2021](https://quality.arc42.org/references/#bass2021software)
 
 ### What Stakeholders mean by _usable_
 
